@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/VivadoProjects/LAB2/LAB2.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="340fs"></ZoomStartTime>
+      <ZoomEndTime time="2389fs"></ZoomEndTime>
+      <Cursor1Time time="617fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="224"></NameColumnWidth>
+      <ValueColumnWidth column_width="61"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="design_1_i/AXI4Stream_UART_0_M00_AXIS_RX_TDATA" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/AXI4Stream_UART_0_M00_AXIS_RX_TDATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">AXI4Stream_UART_0_M00_AXIS_RX_TDATA[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/AXI4Stream_UART_0_M00_AXIS_RX_TREADY" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/AXI4Stream_UART_0_M00_AXIS_RX_TREADY</obj_property>
+      <obj_property name="ObjectShortName">AXI4Stream_UART_0_M00_AXIS_RX_TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/AXI4Stream_UART_0_M00_AXIS_RX_TVALID" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/AXI4Stream_UART_0_M00_AXIS_RX_TVALID</obj_property>
+      <obj_property name="ObjectShortName">AXI4Stream_UART_0_M00_AXIS_RX_TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/divisor_0_m_axis_TDATA" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/divisor_0_m_axis_TDATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">divisor_0_m_axis_TDATA[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/divisor_0_m_axis_TREADY" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/divisor_0_m_axis_TREADY</obj_property>
+      <obj_property name="ObjectShortName">divisor_0_m_axis_TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_1_i/divisor_0_m_axis_TVALID" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_1_i/divisor_0_m_axis_TVALID</obj_property>
+      <obj_property name="ObjectShortName">divisor_0_m_axis_TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

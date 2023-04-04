@@ -1,0 +1,23 @@
+set_property IOSTANDARD LVCMOS33 [get_ports SPI_M_0_io0_io]
+set_property IOSTANDARD LVCMOS33 [get_ports SPI_M_0_io1_io]
+set_property IOSTANDARD LVCMOS33 [get_ports SPI_M_0_sck_io]
+set_property IOSTANDARD LVCMOS33 [get_ports SPI_M_0_ss_io]
+set_property PACKAGE_PIN J1 [get_ports SPI_M_0_ss_io]
+
+set_property PACKAGE_PIN L2 [get_ports SPI_M_0_io0_io]
+set_property PACKAGE_PIN J2 [get_ports SPI_M_0_io1_io]
+set_property PACKAGE_PIN G2 [get_ports SPI_M_0_sck_io]
+
+connect_debug_port u_ila_0/probe1 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_IO0_I]]
+connect_debug_port u_ila_0/probe2 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_IO0_O]]
+connect_debug_port u_ila_0/probe3 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_IO0_T]]
+connect_debug_port u_ila_0/probe4 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_IO1_I]]
+connect_debug_port u_ila_0/probe5 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_IO1_O]]
+connect_debug_port u_ila_0/probe6 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_IO1_T]]
+connect_debug_port u_ila_0/probe7 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_SCK_I]]
+connect_debug_port u_ila_0/probe8 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_SCK_O]]
+connect_debug_port u_ila_0/probe9 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_SCK_T]]
+connect_debug_port u_ila_0/probe10 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_SS_I]]
+connect_debug_port u_ila_0/probe11 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_SS_O]]
+connect_debug_port u_ila_0/probe12 [get_nets [list design_1_i/axi4stream_spi_master_0_SPI_M_SS_T]]
+

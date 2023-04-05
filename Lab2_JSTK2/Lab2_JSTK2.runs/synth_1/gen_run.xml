@@ -71,7 +71,7 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_jstk_uart_bridge_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_UART_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI4Stream_UART_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_digilent_jstk2_0_0"/>
 </GenRun>

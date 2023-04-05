@@ -51,7 +51,6 @@ architecture Behavioral of digilent_jstk2 is
 
 	type state_cmd_type is (WAIT_DELAY, SEND_CMD, SEND_RED, SEND_GREEN, SEND_BLUE, SEND_DUMMY);
 	signal state_cmd			: state_cmd_type;
-	signal next_state : state_cmd_type;
 
 	------------------------------------------------------------
 
@@ -88,10 +87,10 @@ begin
                 when WAIT_DELAY =>
                 
                     counter <= counter + 1;
-                    if counter = DELAY_CYCLES then
-                        state_cmd <= SEND_CMD;
-                        m_axis_tdata <= packet_snd(4); 
-                        packet_snd <= (4 => CMDSETLEDRGB, 3 => led_r, 2 => led_g, 1 => led_b, 0 => (Others => '0'));                        
+                    if counter = DELAY_CYCLES then                        
+                        m_axis_tdata <= packet_snd(4);
+                        state_cmd <= SEND_CMD;                         
+                        packet_snd <= (4 => CMDSETLEDRGB, 3 => (Others => '0'), 2 => (Others => '1'), 1 => (Others => '0'), 0 => (Others => '0'));                        
                         counter <= (Others => '0');
                     end if;
                     
@@ -100,38 +99,33 @@ begin
                     if m_axis_tready = '1' then
                         m_axis_tdata <= packet_snd(3); 
                         state_cmd <= SEND_RED;
-                        counter <= (Others => '0');
                     end if;
                 
                 when SEND_RED =>
                                       
-                    if m_axis_tready = '1' then
-                        state_cmd <= SEND_GREEN;
-                        counter <= (Others => '0');
-                        m_axis_tdata <= packet_snd(2); 
+                    if m_axis_tready = '1' then                       
+                        m_axis_tdata <= packet_snd(2);
+                        state_cmd <= SEND_GREEN; 
                     end if;
                     
                 when SEND_GREEN => 
                 
-                    if m_axis_tready = '1' then
-                        state_cmd <= SEND_BLUE;
-                        m_axis_tdata <= packet_snd(1); 
-                        counter <= (Others => '0');                        
+                    if m_axis_tready = '1' then                        
+                        m_axis_tdata <= packet_snd(1);
+                        state_cmd <= SEND_BLUE;                                                 
                     end if;
                     
                 when SEND_BLUE =>
                                     
-                    if m_axis_tready = '1' then
-                        state_cmd <= SEND_DUMMY;
-                        m_axis_tdata <= packet_snd(0); 
-                        counter <= (Others => '0');                        
+                    if m_axis_tready = '1' then                        
+                        m_axis_tdata <= packet_snd(0);
+                        state_cmd <= SEND_DUMMY;                                                 
                     end if;
                 
                 when SEND_DUMMY =>
                                     
                     if m_axis_tready = '1' then
                         state_cmd <= WAIT_DELAY;                      
-                        counter <= (Others => '0');
                     end if;
                 
             end case;

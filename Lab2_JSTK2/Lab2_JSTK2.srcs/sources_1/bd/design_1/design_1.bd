@@ -7,8 +7,7 @@
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2",
-      "validated": "true"
+      "tool_version": "2022.2"
     },
     "design_tree": {
       "AXI4Stream_UART_0": "",
@@ -21,11 +20,73 @@
     "interface_ports": {
       "usb_uart": {
         "mode": "Master",
-        "vlnv": "xilinx.com:interface:uart_rtl:1.0"
+        "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
+        "vlnv": "xilinx.com:interface:uart_rtl:1.0",
+        "port_maps": {
+          "TxD": {
+            "physical_name": "usb_uart_txd",
+            "direction": "O"
+          },
+          "RxD": {
+            "physical_name": "usb_uart_rxd",
+            "direction": "I"
+          }
+        }
       },
       "SPI_M_0": {
         "mode": "Master",
-        "vlnv": "xilinx.com:interface:spi_rtl:1.0"
+        "vlnv_bus_definition": "xilinx.com:interface:spi:1.0",
+        "vlnv": "xilinx.com:interface:spi_rtl:1.0",
+        "port_maps": {
+          "SCK_T": {
+            "physical_name": "SPI_M_0_sck_t",
+            "direction": "O"
+          },
+          "IO1_O": {
+            "physical_name": "SPI_M_0_io1_o",
+            "direction": "O"
+          },
+          "SS_T": {
+            "physical_name": "SPI_M_0_ss_t",
+            "direction": "O"
+          },
+          "IO0_O": {
+            "physical_name": "SPI_M_0_io0_o",
+            "direction": "O"
+          },
+          "SCK_I": {
+            "physical_name": "SPI_M_0_sck_i",
+            "direction": "I"
+          },
+          "SS_O": {
+            "physical_name": "SPI_M_0_ss_o",
+            "direction": "O"
+          },
+          "IO0_T": {
+            "physical_name": "SPI_M_0_io0_t",
+            "direction": "O"
+          },
+          "IO1_T": {
+            "physical_name": "SPI_M_0_io1_t",
+            "direction": "O"
+          },
+          "SCK_O": {
+            "physical_name": "SPI_M_0_sck_o",
+            "direction": "O"
+          },
+          "SS_I": {
+            "physical_name": "SPI_M_0_ss_i",
+            "direction": "I"
+          },
+          "IO1_I": {
+            "physical_name": "SPI_M_0_io1_i",
+            "direction": "I"
+          },
+          "IO0_I": {
+            "physical_name": "SPI_M_0_io0_i",
+            "direction": "I"
+          }
+        }
       }
     },
     "ports": {
@@ -33,20 +94,8 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_sys_clock",
-            "value_src": "default"
-          },
           "FREQ_HZ": {
             "value": "100000000"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
           },
           "PHASE": {
             "value": "0.000"
@@ -57,10 +106,6 @@
         "type": "rst",
         "direction": "I",
         "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
           "POLARITY": {
             "value": "ACTIVE_HIGH"
           }
@@ -137,6 +182,7 @@
         "interface_ports": {
           "m_axis": {
             "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",
             "parameters": {
               "TDATA_NUM_BYTES": {
@@ -170,18 +216,6 @@
               "HAS_TLAST": {
                 "value": "0",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             },
             "port_maps": {
@@ -203,6 +237,7 @@
           },
           "s_axis": {
             "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",
             "parameters": {
               "TDATA_NUM_BYTES": {
@@ -236,18 +271,6 @@
               "HAS_TLAST": {
                 "value": "0",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             },
             "port_maps": {
@@ -280,18 +303,6 @@
               "ASSOCIATED_RESET": {
                 "value": "aresetn",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             }
           },
@@ -351,6 +362,7 @@
         "interface_ports": {
           "m_axis": {
             "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",
             "parameters": {
               "TDATA_NUM_BYTES": {
@@ -384,18 +396,6 @@
               "HAS_TLAST": {
                 "value": "0",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             },
             "port_maps": {
@@ -417,6 +417,7 @@
           },
           "s_axis": {
             "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
             "vlnv": "xilinx.com:interface:axis_rtl:1.0",
             "parameters": {
               "TDATA_NUM_BYTES": {
@@ -450,18 +451,6 @@
               "HAS_TLAST": {
                 "value": "0",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             },
             "port_maps": {
@@ -490,18 +479,6 @@
               "ASSOCIATED_RESET": {
                 "value": "aresetn",
                 "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
               }
             }
           },
@@ -550,22 +527,16 @@
       }
     },
     "interface_nets": {
+      "AXI4Stream_UART_0_M00_AXIS_RX": {
+        "interface_ports": [
+          "AXI4Stream_UART_0/M00_AXIS_RX",
+          "jstk_uart_bridge_0/s_axis"
+        ]
+      },
       "AXI4Stream_UART_0_UART": {
         "interface_ports": [
           "usb_uart",
           "AXI4Stream_UART_0/UART"
-        ]
-      },
-      "jstk_uart_bridge_0_m_axis": {
-        "interface_ports": [
-          "jstk_uart_bridge_0/m_axis",
-          "AXI4Stream_UART_0/S00_AXIS_TX"
-        ]
-      },
-      "digilent_jstk2_0_m_axis": {
-        "interface_ports": [
-          "digilent_jstk2_0/m_axis",
-          "axi4stream_spi_master_0/S_AXIS"
         ]
       },
       "axi4stream_spi_master_0_M_AXIS": {
@@ -580,27 +551,20 @@
           "axi4stream_spi_master_0/SPI_M"
         ]
       },
-      "AXI4Stream_UART_0_M00_AXIS_RX": {
+      "digilent_jstk2_0_m_axis": {
         "interface_ports": [
-          "AXI4Stream_UART_0/M00_AXIS_RX",
-          "jstk_uart_bridge_0/s_axis"
+          "digilent_jstk2_0/m_axis",
+          "axi4stream_spi_master_0/S_AXIS"
+        ]
+      },
+      "jstk_uart_bridge_0_m_axis": {
+        "interface_ports": [
+          "jstk_uart_bridge_0/m_axis",
+          "AXI4Stream_UART_0/S00_AXIS_TX"
         ]
       }
     },
     "nets": {
-      "sys_clock_1": {
-        "ports": [
-          "sys_clock",
-          "clk_wiz_0/clk_in1"
-        ]
-      },
-      "reset_1": {
-        "ports": [
-          "reset",
-          "clk_wiz_0/reset",
-          "proc_sys_reset_0/ext_reset_in"
-        ]
-      },
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
@@ -611,6 +575,54 @@
           "AXI4Stream_UART_0/s00_axis_tx_aclk",
           "jstk_uart_bridge_0/aclk",
           "digilent_jstk2_0/aclk"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "proc_sys_reset_0/dcm_locked"
+        ]
+      },
+      "digilent_jstk2_0_btn_jstk": {
+        "ports": [
+          "digilent_jstk2_0/btn_jstk",
+          "jstk_uart_bridge_0/btn_jstk"
+        ]
+      },
+      "digilent_jstk2_0_btn_trigger": {
+        "ports": [
+          "digilent_jstk2_0/btn_trigger",
+          "jstk_uart_bridge_0/btn_trigger"
+        ]
+      },
+      "digilent_jstk2_0_jstk_x": {
+        "ports": [
+          "digilent_jstk2_0/jstk_x",
+          "jstk_uart_bridge_0/jstk_x"
+        ]
+      },
+      "digilent_jstk2_0_jstk_y": {
+        "ports": [
+          "digilent_jstk2_0/jstk_y",
+          "jstk_uart_bridge_0/jstk_y"
+        ]
+      },
+      "jstk_uart_bridge_0_led_b": {
+        "ports": [
+          "jstk_uart_bridge_0/led_b",
+          "digilent_jstk2_0/led_b"
+        ]
+      },
+      "jstk_uart_bridge_0_led_g": {
+        "ports": [
+          "jstk_uart_bridge_0/led_g",
+          "digilent_jstk2_0/led_g"
+        ]
+      },
+      "jstk_uart_bridge_0_led_r": {
+        "ports": [
+          "jstk_uart_bridge_0/led_r",
+          "digilent_jstk2_0/led_r"
         ]
       },
       "proc_sys_reset_0_peripheral_aresetn": {
@@ -629,52 +641,17 @@
           "AXI4Stream_UART_0/rst"
         ]
       },
-      "clk_wiz_0_locked": {
+      "reset_1": {
         "ports": [
-          "clk_wiz_0/locked",
-          "proc_sys_reset_0/dcm_locked"
+          "reset",
+          "clk_wiz_0/reset",
+          "proc_sys_reset_0/ext_reset_in"
         ]
       },
-      "digilent_jstk2_0_jstk_x": {
+      "sys_clock_1": {
         "ports": [
-          "digilent_jstk2_0/jstk_x",
-          "jstk_uart_bridge_0/jstk_x"
-        ]
-      },
-      "digilent_jstk2_0_jstk_y": {
-        "ports": [
-          "digilent_jstk2_0/jstk_y",
-          "jstk_uart_bridge_0/jstk_y"
-        ]
-      },
-      "digilent_jstk2_0_btn_jstk": {
-        "ports": [
-          "digilent_jstk2_0/btn_jstk",
-          "jstk_uart_bridge_0/btn_jstk"
-        ]
-      },
-      "digilent_jstk2_0_btn_trigger": {
-        "ports": [
-          "digilent_jstk2_0/btn_trigger",
-          "jstk_uart_bridge_0/btn_trigger"
-        ]
-      },
-      "jstk_uart_bridge_0_led_r": {
-        "ports": [
-          "jstk_uart_bridge_0/led_r",
-          "digilent_jstk2_0/led_r"
-        ]
-      },
-      "jstk_uart_bridge_0_led_g": {
-        "ports": [
-          "jstk_uart_bridge_0/led_g",
-          "digilent_jstk2_0/led_g"
-        ]
-      },
-      "jstk_uart_bridge_0_led_b": {
-        "ports": [
-          "jstk_uart_bridge_0/led_b",
-          "digilent_jstk2_0/led_b"
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
         ]
       }
     }

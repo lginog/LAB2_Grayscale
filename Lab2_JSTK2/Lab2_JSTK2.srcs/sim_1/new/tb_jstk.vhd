@@ -104,8 +104,10 @@ end component;
 	----------------------------		
 	
 	signal b : std_logic_vector(39 downto 0) := "1010110100000010110111100000000100000011";
+	signal c : std_logic_vector(39 downto 0) := "1011111100000001110010100000001000000001";
 	
 	signal counter : unsigned(5 downto 0) := "100111";
+	signal flag : std_logic := '0';
 	
 	----------------------------------------------------------------
 
@@ -227,10 +229,15 @@ begin
 	       counter <= counter - 1;
 	   elsif rising_edge(dut_sclk) then
 	       counter <= counter - 1;
-	       dut_MISO <= b(to_integer(counter));
+	       if flag = '0' then
+	           dut_MISO <= b(to_integer(counter));
+	       elsif flag = '1' then
+	           dut_MISO <= c(to_integer(counter));
+	       end if;
 	       
 	       if counter = 0 then
 	           counter <= "100111";
+	           flag <= not flag;
 	       end if; 
 	   end if;
 	end process;

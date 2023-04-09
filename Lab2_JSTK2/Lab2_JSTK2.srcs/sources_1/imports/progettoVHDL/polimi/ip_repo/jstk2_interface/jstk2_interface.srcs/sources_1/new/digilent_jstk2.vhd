@@ -144,24 +144,6 @@ begin
                 when GET_X_LSB =>
                     
                     if s_axis_tvalid = '1' then
-                        
-                        jstk_x(9) <= packet_rcv(3)(1);
-                        jstk_x(8) <= packet_rcv(3)(0);
-    
-                        for I in 7 downto 0 loop
-                            jstk_x(I) <= packet_rcv(4)(I);
-                        end loop;
-    
-                        jstk_y(9) <= packet_rcv(1)(1);
-                        jstk_y(8) <= packet_rcv(1)(0);
-    
-                        for I in 7 downto 0 loop
-                            jstk_y(I) <= packet_rcv(2)(I);
-                        end loop;
-    
-                        btn_trigger <= packet_rcv(0)(1);
-                        btn_jstk <= packet_rcv(0)(0);
-                        
                         packet_rcv(4) <= s_axis_tdata;
                         state_sts <= GET_X_MSB;
                     end if;
@@ -190,7 +172,16 @@ begin
                 when GET_BUTTONS =>
                     
                     if s_axis_tvalid = '1' then
-                        packet_rcv(0) <= s_axis_tdata;
+                    
+                        jstk_x(9 downto 8) <= packet_rcv(3)(1 downto 0);
+                        jstk_x(7 downto 0) <= packet_rcv(4)(7 downto 0);
+                        -- joystick 7 axis from 12 bits right aligned input
+                        jstk_y( 9 downto 8) <= packet_rcv(1)(1 downto 0);
+                        jstk_y( 7 downto 0) <= packet_rcv(2)(7 downto 0);
+                        -- button status                        
+                        btn_trigger <= s_axis_tdata(1);
+                        btn_jstk <= s_axis_tdata(0);
+                        
                         state_sts <= GET_X_LSB;
                     end if;
                 

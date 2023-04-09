@@ -51,6 +51,7 @@ architecture Behavioral of digilent_jstk2 is
 
 	type state_cmd_type is (WAIT_DELAY, SEND_CMD, SEND_RED, SEND_GREEN, SEND_BLUE, SEND_DUMMY);
 	signal state_cmd			: state_cmd_type;
+	signal next_state           : state_cmd_type;
 
 	------------------------------------------------------------
 
@@ -71,10 +72,9 @@ begin
         '1' when SEND_RED,
         '1' when SEND_GREEN,
         '1' when SEND_BLUE,
-        '1' when SEND_DUMMY; 
+        '1' when SEND_DUMMY;
 
-    cmd_process : process(aclk, aresetn)
-    
+    cmd_process : process(aclk, aresetn)  
     begin
         if aresetn = '0' then
             state_cmd <= WAIT_DELAY;
@@ -87,10 +87,10 @@ begin
                 when WAIT_DELAY =>
                 
                     counter <= counter + 1;
-                    if counter = DELAY_CYCLES then                        
-                        m_axis_tdata <= packet_snd(4);
-                        state_cmd <= SEND_CMD;                         
-                        packet_snd <= (4 => CMDSETLEDRGB, 3 => (Others => '0'), 2 => (Others => '1'), 1 => (Others => '0'), 0 => (Others => '0'));                        
+                    if counter = DELAY_CYCLES then
+                        state_cmd <= SEND_CMD;
+                        m_axis_tdata <= packet_snd(4); 
+                        packet_snd <= (4 => CMDSETLEDRGB, 3 => led_r, 2 => led_g, 1 => led_b, 0 => (Others => '0'));                        
                         counter <= (Others => '0');
                     end if;
                     
@@ -99,52 +99,70 @@ begin
                     if m_axis_tready = '1' then
                         m_axis_tdata <= packet_snd(3); 
                         state_cmd <= SEND_RED;
+                        counter <= (Others => '0');
                     end if;
                 
                 when SEND_RED =>
                                       
-                    if m_axis_tready = '1' then                       
-                        m_axis_tdata <= packet_snd(2);
-                        state_cmd <= SEND_GREEN; 
+                    if m_axis_tready = '1' then
+                        state_cmd <= SEND_GREEN;
+                        counter <= (Others => '0');
+                        m_axis_tdata <= packet_snd(2); 
                     end if;
                     
                 when SEND_GREEN => 
                 
-                    if m_axis_tready = '1' then                        
-                        m_axis_tdata <= packet_snd(1);
-                        state_cmd <= SEND_BLUE;                                                 
+                    if m_axis_tready = '1' then
+                        state_cmd <= SEND_BLUE;
+                        m_axis_tdata <= packet_snd(1); 
+                        counter <= (Others => '0');                        
                     end if;
                     
                 when SEND_BLUE =>
                                     
-                    if m_axis_tready = '1' then                        
-                        m_axis_tdata <= packet_snd(0);
-                        state_cmd <= SEND_DUMMY;                                                 
+                    if m_axis_tready = '1' then
+                        state_cmd <= SEND_DUMMY;
+                        m_axis_tdata <= packet_snd(0); 
+                        counter <= (Others => '0');                        
                     end if;
                 
                 when SEND_DUMMY =>
                                     
                     if m_axis_tready = '1' then
                         state_cmd <= WAIT_DELAY;                      
+                        counter <= (Others => '0');
                     end if;
                 
             end case;
         end if;
     end process cmd_process;
 
-
     rcv_process : process(aclk, aresetn)
-    
     begin
         if aresetn = '0' then
             state_sts <= GET_X_LSB;
         elsif rising_edge(aclk) then
             case state_sts is
                 
+                -- this state get the last packet byte and commits all the previosly chached
+                -- values from the same packet to the outputs
+                -- note that the last value is never chached
                 when GET_X_LSB =>
-                    
                     if s_axis_tvalid = '1' then
+<<<<<<< HEAD
                         packet_rcv(4) <= s_axis_tdata;
+=======
+                        -- joystick x axis from 12 bits right aligned input
+                        jstk_x( 9 downto 8) <= packet_rcv(3)(1 downto 0);
+                        jstk_x( 7 downto 0) <= s_axis_tdata(7 downto 0);
+                        -- joystick 7 axis from 12 bits right aligned input
+                        jstk_y( 9 downto 8) <= packet_rcv(1)(1 downto 0);
+                        jstk_y( 7 downto 0) <= packet_rcv(2)(7 downto 0);
+                        -- button status
+                        btn_trigger <= packet_rcv(0)(1);
+                        btn_jstk <= packet_rcv(0)(0);
+                        -- next state
+>>>>>>> fd00487e8dc6905ed5c5f1b10c2c2520e3bc6395
                         state_sts <= GET_X_MSB;
                     end if;
                 
@@ -188,7 +206,4 @@ begin
             end case;
         end if;    
     end process rcv_process;
-
-
-
 end architecture;

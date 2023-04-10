@@ -1,0 +1,25 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd,1681131215,vhdl,,,,design_1_wrapper,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_AXI4Stream_UART_0_0/sim/design_1_AXI4Stream_UART_0_0.vhd,1681121100,vhdl,,,,design_1_axi4stream_uart_0_0,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_axi4stream_spi_master_0_0/sim/design_1_axi4stream_spi_master_0_0.vhd,1681117140,vhdl,,,,design_1_axi4stream_spi_master_0_0,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v,1681117947,verilog,,,,design_1_clk_wiz_0_0,,,../../../../Lab2_JSTK2.gen/sources_1/bd/design_1/ipshared/7698,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v,1681117947,verilog,,C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v,,design_1_clk_wiz_0_0_clk_wiz,,,../../../../Lab2_JSTK2.gen/sources_1/bd/design_1/ipshared/7698,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_digilent_jstk2_0_0/sim/design_1_digilent_jstk2_0_0.vhd,1681121101,vhdl,,,,design_1_digilent_jstk2_0_0,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_jstk_uart_bridge_0_0/sim/design_1_jstk_uart_bridge_0_0.vhd,1681121101,vhdl,,,,design_1_jstk_uart_bridge_0_0,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_proc_sys_reset_0_0/sim/design_1_proc_sys_reset_0_0.vhd,1681117140,vhdl,,,,design_1_proc_sys_reset_0_0,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ccb7/hdl/AXI4Stream_UART_v1_0.vhd,1681121100,vhdl,,,,axi4stream_uart_v1_0,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ccb7/hdl/AXI4Stream_UART_v1_0_M00_AXIS_RX.vhd,1681121100,vhdl,,,,axi4stream_uart_v1_0_m00_axis_rx,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ccb7/hdl/AXI4Stream_UART_v1_0_S00_AXIS_TX.vhd,1681121100,vhdl,,,,axi4stream_uart_v1_0_s00_axis_tx,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ccb7/hdl/UART_Engine.vhd,1681121100,vhdl,,,,uart_engine,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ccb7/hdl/UART_Manager.vhd,1681121100,vhdl,,,,uart_manager,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ead8/hdl/axis_lw_spi_master.vhd,1681117140,vhdl,,,,axis_lw_spi_master,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ead8/hdl/ipi_axis_lw_spi_master.vhd,1681117140,vhdl,,,,ipi_axis_lw_spi_master,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ead8/hdl/spi_master_lightweight/rtl/lw_spi_master.vhd,1681117140,vhdl,,,,lw_spi_master,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/sim/design_1.vhd,1681121100,vhdl,,,,design_1,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.sim/sim_1/behav/xsim/glbl.v,1681117140,verilog,,,,glbl,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.srcs/sim_1/new/tb_jstk.vhd,1681117140,vhdl,,,,tb_pulsewidthmodulator,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.srcs/sources_1/imports/digilent_jstk2.vhd,1681131036,vhdl,,,,digilent_jstk2,,,,,,,,
+C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.srcs/sources_1/imports/jstk_uart_bridge.vhd,1681131185,vhdl,,,,jstk_uart_bridge,,,,,,,,

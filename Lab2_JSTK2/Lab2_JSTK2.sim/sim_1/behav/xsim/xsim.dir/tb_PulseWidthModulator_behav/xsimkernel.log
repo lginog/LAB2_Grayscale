@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_PulseWidthModulator_behav/xsimk.exe -simmode gui -wdb tb_PulseWidthModulator_behav.wdb -simrunnum 0 -socket 50070
-Design successfully loaded
-Design Loading Memory Usage: 7616 KB (Peak: 7616 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 17640 KB (Peak: 17640 KB)
-Simulation CPU Usage: 24108 ms

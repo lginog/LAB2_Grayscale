@@ -1,0 +1,42 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_clk_wiz_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.srcs/sources_1/imports/jstk_uart_bridge.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'jstk_uart_bridge'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.srcs/sources_1/imports/digilent_jstk2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'digilent_jstk2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ccb7/hdl/AXI4Stream_UART_v1_0_M00_AXIS_RX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXI4Stream_UART_v1_0_M00_AXIS_RX'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ccb7/hdl/AXI4Stream_UART_v1_0_S00_AXIS_TX.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXI4Stream_UART_v1_0_S00_AXIS_TX'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ccb7/hdl/UART_Engine.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'UART_Engine'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ccb7/hdl/UART_Manager.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'UART_Manager'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ccb7/hdl/AXI4Stream_UART_v1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXI4Stream_UART_v1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_AXI4Stream_UART_0_0/sim/design_1_AXI4Stream_UART_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_AXI4Stream_UART_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ead8/hdl/axis_lw_spi_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axis_lw_spi_master'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ead8/hdl/spi_master_lightweight/rtl/lw_spi_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'lw_spi_master'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ipshared/ead8/hdl/ipi_axis_lw_spi_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ipi_axis_lw_spi_master'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_axi4stream_spi_master_0_0/sim/design_1_axi4stream_spi_master_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_axi4stream_spi_master_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_proc_sys_reset_0_0/sim/design_1_proc_sys_reset_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_proc_sys_reset_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_jstk_uart_bridge_0_0/sim/design_1_jstk_uart_bridge_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_jstk_uart_bridge_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/ip/design_1_digilent_jstk2_0_0/sim/design_1_digilent_jstk2_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_digilent_jstk2_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.ip_user_files/bd/design_1/sim/design_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_1_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/posta/Src/LAB2_git/Joystick/Lab2_JSTK2.srcs/sim_1/new/tb_jstk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_PulseWidthModulator'

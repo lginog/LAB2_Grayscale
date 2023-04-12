@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Sun Mar 26 15:40:28 2023
+-- Date        : Wed Apr 12 15:52:11 2023
 -- Host        : LAPTOP-4VVKQOQK running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               d:/VivadoProjects/LAB2/LAB2.gen/sources_1/bd/design_1/ip/design_1_divisor_0_0/design_1_divisor_0_0_stub.vhdl
+--               d:/Git/LAB2_Grayscale/LAB2/LAB2.gen/sources_1/bd/design_1/ip/design_1_divisor_0_0/design_1_divisor_0_0_stub.vhdl
 -- Design      : design_1_divisor_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

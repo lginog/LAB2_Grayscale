@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/VivadoProjects/LAB2/LAB2.runs/impl_1/design_1_wrapper.tcl"
+  variable script "D:/Git/LAB2_Grayscale/LAB2/LAB2.runs/impl_1/design_1_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,8 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -124,9 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
   set_property board_part_repo_paths {C:/Users/gesua/AppData/Roaming/Xilinx/Vivado/2020.2/xhub/board_store/xilinx_board_store} [current_project]
@@ -135,22 +131,22 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/VivadoProjects/LAB2/LAB2.cache/wt [current_project]
-  set_property parent.project_path D:/VivadoProjects/LAB2/LAB2.xpr [current_project]
+  set_property webtalk.parent_dir D:/Git/LAB2_Grayscale/LAB2/LAB2.cache/wt [current_project]
+  set_property parent.project_path D:/Git/LAB2_Grayscale/LAB2/LAB2.xpr [current_project]
   set_property ip_repo_paths D:/VivadoProjects/my_repo [current_project]
   update_ip_catalog
-  set_property ip_output_repo D:/VivadoProjects/LAB2/LAB2.cache/ip [current_project]
+  set_property ip_output_repo D:/Git/LAB2_Grayscale/LAB2/LAB2.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/VivadoProjects/LAB2/LAB2.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet D:/Git/LAB2_Grayscale/LAB2/LAB2.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/VivadoProjects/LAB2/LAB2.srcs/sources_1/bd/design_1/design_1.bd
+  add_files D:/Git/LAB2_Grayscale/LAB2/LAB2.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/VivadoProjects/LAB2/LAB2.srcs/constrs_1/new/constr.xdc
+  read_xdc D:/Git/LAB2_Grayscale/LAB2/LAB2.srcs/constrs_1/new/constr.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

@@ -8,7 +8,7 @@ close all;
 clc;
 
 % User settings
-input_image = 'input.png';
+input_image = 'input';
 output_image = 'output.png';
 serial_port_name = 'COM6';
 serial_baudrate = 115200;
@@ -19,7 +19,7 @@ fprintf('Loading image from ''%s''...\n', input_image)
 % Read the input image from the file
 % The returned matrix is a [rows x columns x 3] matrix, where the third index
 % represents Red (1), Green (2) or Blue (3)
-img_matrix = imread(input_image);
+img_matrix = imread(input_image, 'png');
 
 % Extract the size of the image
 rows_number = size(img_matrix, 1);

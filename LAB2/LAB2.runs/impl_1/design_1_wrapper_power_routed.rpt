@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Sun Mar 26 15:42:20 2023
+| Date             : Wed Apr 12 15:55:55 2023
 | Host             : LAPTOP-4VVKQOQK running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -53,16 +53,15 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.003 |        5 |       --- |             --- |
-| Slice Logic             |     0.002 |      922 |       --- |             --- |
-|   LUT as Logic          |     0.001 |      246 |     20800 |            1.18 |
+| Slice Logic             |     0.002 |      975 |       --- |             --- |
+|   LUT as Logic          |     0.001 |      277 |     20800 |            1.33 |
 |   Register              |    <0.001 |      491 |     41600 |            1.18 |
-|   CARRY4                |    <0.001 |       45 |      8150 |            0.55 |
-|   Others                |     0.000 |       75 |       --- |             --- |
+|   CARRY4                |    <0.001 |       54 |      8150 |            0.66 |
+|   Others                |     0.000 |       73 |       --- |             --- |
 |   LUT as Shift Register |     0.000 |        1 |      9600 |            0.01 |
-| Signals                 |     0.002 |      629 |       --- |             --- |
+| Signals                 |     0.002 |      660 |       --- |             --- |
 | Block RAM               |     0.001 |        1 |        50 |            2.00 |
 | MMCM                    |     0.106 |        1 |         5 |           20.00 |
-| DSPs                    |    <0.001 |        1 |        90 |            1.11 |
 | I/O                     |    <0.001 |        4 |       106 |            3.77 |
 | Static Power            |     0.072 |          |           |                 |
 | Total                   |     0.186 |          |           |                 |

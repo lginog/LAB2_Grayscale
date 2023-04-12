@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/VivadoProjects/LAB2/LAB2.runs/design_1_divisor_0_0_synth_1'
+HD_PWD='D:/Git/LAB2_Grayscale/LAB2/LAB2.runs/design_1_divisor_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

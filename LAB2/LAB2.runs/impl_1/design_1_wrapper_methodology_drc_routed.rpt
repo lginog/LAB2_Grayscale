@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sun Mar 26 15:42:19 2023
+| Date         : Wed Apr 12 15:55:53 2023
 | Host         : LAPTOP-4VVKQOQK running 64-bit major release  (build 9200)
 | Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -51,15 +51,15 @@ Related violations: <none>
 XDCC-2#1 Warning
 Scoped Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on reset overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
-New Source: D:/VivadoProjects/LAB2/LAB2.srcs/constrs_1/new/constr.xdc (Line: 2)
-Previous Source: d:/VivadoProjects/LAB2/LAB2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc (Line: 4)
+New Source: D:/Git/LAB2_Grayscale/LAB2/LAB2.srcs/constrs_1/new/constr.xdc (Line: 2)
+Previous Source: d:/Git/LAB2_Grayscale/LAB2/LAB2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc (Line: 4)
 Related violations: <none>
 
 XDCC-2#2 Warning
 Scoped Non-Timing constraint/property overwritten  
 A new XDC property IOSTANDARD on sys_clock overrides a previous scoped property. It is not recommended to override a scoped (typically an IP) property and could result in unexpected behaviours.
-New Source: D:/VivadoProjects/LAB2/LAB2.srcs/constrs_1/new/constr.xdc (Line: 1)
-Previous Source: d:/VivadoProjects/LAB2/LAB2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc (Line: 3)
+New Source: D:/Git/LAB2_Grayscale/LAB2/LAB2.srcs/constrs_1/new/constr.xdc (Line: 1)
+Previous Source: d:/Git/LAB2_Grayscale/LAB2/LAB2.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc (Line: 3)
 Related violations: <none>
 
 
